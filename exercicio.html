@@ -15,6 +15,11 @@
             border-collapse: collapse;
         }
 
+        tr.linha {
+            height:100px ;
+        }
+        
+
         td {
             border: 1px solid black;
             padding: 8px;
@@ -22,6 +27,27 @@
             text-align: center;      
             vertical-align: middle;  
         }
+
+         .direita {
+            text-align: right;
+            vertical-align: top;
+
+         }
+
+         .esquerda {
+            text-align: left;
+            vertical-align: top;
+
+         }
+
+         .topo {
+            vertical-align: top ;
+         }
+
+         .baixo {
+            vertical-align: bottom ;
+         }
+
 
         /* 
         ================================
@@ -55,23 +81,23 @@
     
     <table>
         <tr> <!-- Primeira linha -->
-            <td>A1</td>
-            <td>B1</td>
-            <td>C1</td>
+            <td class="esquerda">A1<br>(esquerda)</td>
+            <td>B1<br>(padrão centro)</td>
+            <td class="direita">C1<br>(direita)</td>
         </tr>
         <tr> <!-- Segunda linha -->
-            <td>A2</td>
+            <td class="topo">A2(topo)</td>
             <td>B2</td>
-            <td>C2</td>
+            <td class="baixo">C2</td>
         </tr>
         <tr> <!-- Terceira linha -->
-            <td>A3</td>
-            <td>B3</td>
+            <td class="topo">A3</td>
+            <td class="baixo">B3</td>
             <td>C3</td>
         </tr>
-        <tr> <!-- Quarta linha -->
+        <tr class="linha"> <!-- Quarta linha -->
             <td>A4</td>
-            <td>B4</td>
+            <td class="direita">1000</td>
             <td>C4</td>
         </tr>
     </table>
